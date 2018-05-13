@@ -10,11 +10,7 @@ declare const $: any;
 })
 export class VideoComponent implements OnInit {
   @Input() data: any;
-  constructor() {
-
-  }
-  ngOnInit() {
-   
-  }
+  constructor() {}
+  ngOnInit() {}
 
 }
