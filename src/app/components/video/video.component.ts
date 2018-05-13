@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output } from '@angular/core';
+import { Component, OnInit, Input, Output, OnDestroy } from '@angular/core';
 declare const $: any;
 
 
@@ -8,9 +8,13 @@ declare const $: any;
   styleUrls: [],
   animations: []
 })
-export class VideoComponent implements OnInit {
+export class VideoComponent implements OnInit, OnDestroy {
   @Input() data: any;
-  constructor() {}
-  ngOnInit() {}
+  constructor() { }
+  ngOnInit() {
+  }
+  ngOnDestroy() {
+
+  }
 
 }
