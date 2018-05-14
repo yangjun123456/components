@@ -5,11 +5,45 @@
 
 <nav>
   <ul>
-    <li ng-click='currentShowComponent(appVideoJs)'>videojs组件</li>
+    <li style="cursor: pointer;" (click)='currentShowComponent("")'>
+      <button>清空当前页面所有</button>
+    </li>
+    <li style="cursor: pointer;" (click)='currentShowComponent("appVideoJs")'>
+      <button>videojs组件</button>
+    </li>
+    <li style="cursor: pointer;" (click)='currentShowComponent("appVideoJs1")'>
+      <button>videojs组件1</button>
+    </li>
+    <li style="cursor: pointer;" (click)='currentShowComponent("appVideoJs2")'>
+      <button>videojs组件2</button>
+    </li>
+    <li style="cursor: pointer;" (click)='currentShowComponent("appVideoJs3")'>
+      <button>videojs组件3</button>
+    </li>
   </ul>
 </nav>
 
 <!-- 默认显示视频组件 -->
-<ng-template [ngIf]='showComponent==="appVideoJs"'>
-  <app-video [data]='"./assets/test.mp4"'></app-video>
-</ng-template>
+<div class="content">
+  <ng-template [ngIf]='showComponent==="appVideoJs"'>
+    <app-video [data]='"./assets/test.mp4"'></app-video>
+  </ng-template>
+  <ng-template [ngIf]='showComponent==="appVideoJs1"'>
+    <app-video [data]='"./assets/test.mp4"'></app-video>
+    <app-video [data]='"./assets/test.mp4"'></app-video>
+  </ng-template>
+  <ng-template [ngIf]='showComponent==="appVideoJs2"'>
+    <app-video [data]='"./assets/test.mp4"'></app-video>
+    <app-video [data]='"./assets/test.mp4"'></app-video>
+    <app-video [data]='"./assets/test.mp4"'></app-video>
+  </ng-template>
+  <ng-template [ngIf]='showComponent==="appVideoJs3"'>
+    <app-video [data]='"./assets/test.mp4"'></app-video>
+    <app-video [data]='"./assets/test.mp4"'></app-video>
+    <app-video [data]='"./assets/test.mp4"'></app-video>
+    <app-video [data]='"./assets/test.mp4"'></app-video>
+  </ng-template>
+  <ng-template [ngIf]='showComponent==="1"'>
+    <app-video [data]='"./assets/test.mp4"'></app-video>
+  </ng-template>
+</div>

@@ -3,14 +3,13 @@ import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
 import 'jquery.nicescroll';
 
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  showComponent = 'appVideoJs';
+  showComponent = '';
   ngOnInit() {
     setTimeout(() => {
       this.niceScroll();
@@ -29,6 +28,7 @@ export class AppComponent implements OnInit {
   }
 
   currentShowComponent(param) {
+    console.log(param);
     this.showComponent = param;
   }
 }
